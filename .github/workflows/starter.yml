@@ -1,0 +1,16 @@
+name : Basic starter workflow
+on: push
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name : checkout action
+        uses : actions/checkout@v4
+
+      - name : print the dirctory using ls
+        run : ls -l
+        working-directory: ./scripts
+
+  
+
+      
