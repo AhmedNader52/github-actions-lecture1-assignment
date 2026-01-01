@@ -16,5 +16,7 @@ jobs:
         shell: pwsh
 
       - name: Print via Python
-        run: python -c 'print("Hello World from Python")'
+        run: |
+          import os 
+          print("Hello world from Python")
         shell: python 
