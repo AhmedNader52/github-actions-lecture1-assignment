@@ -9,7 +9,7 @@ jobs:
 
       - name : print the dirctory using ls
         run : ls -l
-        working-directory: ./scripts
+        working-directory: ./workflows
 
   
 
