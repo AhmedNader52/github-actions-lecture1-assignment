@@ -1,0 +1,18 @@
+name : Environment variable scopes and priority
+on: push
+env:
+     VAR_EXAMPLE: workflow-level 
+jobs:
+    one-job:
+        env:
+            VAR_EXAMPLE: job-level
+        runs-on: ubuntu-latest
+        steps:
+            - name : Display on job level
+              run: echo "$VAR_EXAMPLE"
+            
+            - name : display on step level
+              env: 
+                VAR_EXAMPLE: step-level
+              run: echo "$VAR_EXAMPLE"    
+
