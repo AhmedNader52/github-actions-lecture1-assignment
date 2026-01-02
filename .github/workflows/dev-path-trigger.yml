@@ -1,0 +1,15 @@
+name: Branch and path filtering
+
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - 'src/**'
+
+jobs:
+  one-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger events
+        run: echo "Trigger events"
